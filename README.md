@@ -1,0 +1,1 @@
+For this assignment, we want you to apply the design principles from this quarter to create a personal portfolio website that you could share for job interviews.

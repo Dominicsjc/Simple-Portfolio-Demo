@@ -293,9 +293,18 @@ footer {
     align-items: center;
 }
 
+.social-media {
+    display: flex;
+}
+
 .icon {
     width: 35px;
-    margin: 5px;
+    height: 35px;
+    padding: 5px;
+}
+
+.icon img {
+    width: 100%;
 }
 
 .email-me {
@@ -319,17 +328,11 @@ footer {
     justify-content: center;
     text-align: center;
     align-items: center;
-}
-
-.get-in-touch a {
     color: black;
 }
 
-.get-in-touch:hover {
+.get-in-touch:hover, .get-in-touch:focus {
     background-color: black;
-}
-
-.get-in-touch:hover a {
     color: white;
 }
 

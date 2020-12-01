@@ -1,5 +1,5 @@
 html, body {
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
     margin: 0;
 }
 
@@ -30,7 +30,7 @@ body a {
 }
 
 
-header a:after, #northwestern:after, #aws:after {
+header a:after, #northwestern:after, #aws:after, .parallax-text h4 a:after {
     content: '';
     position: absolute;
     width: 0;
@@ -43,7 +43,8 @@ header a:after, #northwestern:after, #aws:after {
     -webkit-transition: width .5s ease;
 }
 
-header a:hover:after, #northwestern:hover:after, #aws:hover:after {
+header a:hover:after, #northwestern:hover:after, #aws:hover:after, .parallax-text h4 a:hover:after,
+header a:focus:after, #northwestern:focus:after, #aws:focus:after, .parallax-text h4 a:focus:after {
     width: 100%;
     left: 0;
     background: linear-gradient(120deg, #5591FF 0%, #42b0f4 100%);;
@@ -71,7 +72,7 @@ header a:hover:after, #northwestern:hover:after, #aws:hover:after {
     font-weight: 600;
 }
 
-.main-nav a:hover {
+.main-nav a:hover, .main-nav a:focus {
     color: black;
 }
 
@@ -81,9 +82,27 @@ header a:hover:after, #northwestern:hover:after, #aws:hover:after {
 }
 
 .parallax-text {
-    padding: 8% 0 10% 0;
+    padding: 9% 0 10% 0;
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
+
+.parallax-text h4 {
+    color: white;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
+    font-size: 28px;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.parallax-text h4 a {
+    position: relative;
+    color: rgb(254, 212, 0);
+    font-style: normal;
+}
+
 #greeting {
     position: relative;
     margin: 20px auto;
@@ -157,7 +176,7 @@ header a:hover:after, #northwestern:hover:after, #aws:hover:after {
     width: 100%;
     display: block;
     border-radius: 10px;
-    box-shadow: 6px 6px 30px 0 rgba(10,10,10,0.3);
+    box-shadow: 5px 6px 30px 0 rgba(10, 10, 10, 0.3);
 }
 
 .project-container:hover {
@@ -165,12 +184,12 @@ header a:hover:after, #northwestern:hover:after, #aws:hover:after {
     transform: scale(1.02);
 }
 
-.project-container:hover .overlay {
+.project-container:hover .overlay, .project-container .overlay:focus {
     opacity: 1;
     transition: .3s ease-in-out;
 }
 
-.project-container:hover .overlay h3 {
+.project-container:hover .project-title, .project-container .overlay:focus .project-title {
     animation: slide-up .35s ease-out;
 }
 
@@ -191,27 +210,37 @@ header a:hover:after, #northwestern:hover:after, #aws:hover:after {
     justify-content: center;
 }
 
-.overlay h3 {
-    width: 60%;
+.project-title {
     color: white;
-    font-size: calc(18px + 18 * ((100vw - 320px) / (800)));
-
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
+.project-title.overview {
+    width: 65%;
+    font-size: calc(18px + 18 * ((100vw - 320px) / (800)));
+}
+
+.project-title.detail {
+    font-size: 64px;
+    margin-bottom: 0;
+}
+
+
 .aim-overlay {
-    background-color: rgba(32,150,88,0.7);
+    background-color: rgba(32, 150, 88, 0.7);
 }
 
 .compiler-overlay {
-    background-color: rgba(13,175,255,0.7);
+    background-color: rgba(13, 175, 255, 0.7);
 }
 
 .avx-tuning-overlay {
-    background-color: rgba(67,154,218,0.7);
+    background-color: rgba(67, 154, 218, 0.7);
 }
 
 .lsm-overlay {
-    background-color: rgba(127,127,127,0.7);
+    background-color: rgba(127, 127, 127, 0.7);
 }
 
 .contact-container {
@@ -243,6 +272,10 @@ header a:hover:after, #northwestern:hover:after, #aws:hover:after {
     right: 2%;
     bottom: 6%;
     color: darkgray;
+}
+
+.back-to-top-button:hover, .back-to-top-button:focus {
+    color: black;
 }
 
 .material-icons.md-36 {
@@ -313,7 +346,7 @@ footer {
     justify-content: space-between;
 }
 
-.about-me-text  {
+.about-me-text {
     width: 45%;
 }
 
@@ -343,7 +376,10 @@ footer {
 .about-me-portrait img {
     width: 100%;
     border-radius: 4px;
+    box-shadow: 5px 6px 30px 0 rgba(10, 10, 10, 0.3)
 }
+
+
 
 
 

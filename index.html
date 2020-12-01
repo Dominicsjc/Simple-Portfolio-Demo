@@ -2,9 +2,113 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Jiecheng Shi | Software Engineer</title>
+    <link rel="stylesheet" type="text/css" href="portfolio.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body id="top">
+<header class="header">
+    <h1 class="name">
+        <a href="index.html">Jiecheng Shi</a>
+    </h1>
+    <ul class="main-nav">
+        <li>
+            <a href="about.html">About</a>
+        </li>
+        <li>
+            <a href="#work">Work</a>
+        </li>
+        <li>
+            <a href="Jiecheng_Shi_Resume.pdf" target="_blank">Resume</a>
+        </li>
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+    </ul>
+</header>
 
+<div class="parallax-window" data-parallax="scroll" data-image-src="images/front_page.jpg">
+    <div class="parallax-text">
+        <h2 data-aos="fade-down" id="greeting">Hi, I'm Jiecheng!</h2>
+        <h3 data-aos="fade-down" id="headline">Student at
+            <a id="northwestern" href="https://www.northwestern.edu" target="_blank">Northwestern</a>
+            , Incoming Software Engineer at
+            <a id="aws" href="https://aws.amazon.com" target="_blank">AWS</a></h3>
+    </div>
+</div>
+
+<div id="work">
+    <h2 class="part-title"><span>Selected Projects</span></h2>
+    <div class="projects-grid">
+        <div class="project-container">
+            <img src="images/aim_cut.png" alt="application_infrastructure_model">
+            <a class="overlay aim-overlay" href="projects/aim.html">
+                <h3>Application Infrastructure Model</h3>
+            </a>
+        </div>
+        <div class="project-container">
+            <img src="images/compiler_cut.jpeg" alt="homebrew_c_compiler">
+            <a class="overlay compiler-overlay" href="projects/compiler.html">
+                <h3>Homebrew C Compiler</h3>
+            </a>
+        </div>
+        <div class="project-container">
+            <img src="images/avx_512_cut.jpg" alt="avx_tuning_framework">
+            <a class="overlay avx-tuning-overlay" href="projects/avx_tuning.html">
+                <h3>Intelligent AVX Tuning Framework</h3>
+            </a>
+        </div>
+        <div class="project-container">
+            <img src="images/lsm.png" alt="rust_lsm_kv_lib">
+            <a class="overlay lsm-overlay" href="projects/lsm.html">
+                <h3>Rust LSM Tree Key-value Library</h3>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="contact">
+    <h2 class="part-title"><span>Contact</span></h2>
+    <div class="contact-container">
+        <div class="contact-slogan">
+            <p>Feel free to connect with me. Always looking forward to colliding with interesting souls.</p>
+        </div>
+        <div class="contact-information">
+            <p><span>Address:</span> 811 Emerson St., #604, Evanston, IL 60201</p>
+            <p><span>Phone:</span> 224-999-3719</p>
+            <p><span>Email:</span> dominicsjc@qq.com</p>
+            <p><span>Wechat:</span> noh-ack</p>
+        </div>
+
+    </div>
+</div>
+
+<a href="#top" aria-label="Back To Top" class="back-to-top-button">
+    <i class="material-icons md-36">arrow_upward</i>
+</a>
+
+<footer>
+    <div>
+        <a href="https://www.linkedin.com/in/jiecheng-shi-Dominic/" target="_blank">
+            <img class="icon" src="images/linkedin.png" alt="linkedin">
+        </a>
+        <a href="https://github.com/Dominicsjc" target="_blank">
+            <img class="icon" src="images/github.png" alt="github">
+        </a>
+        <a href="https://www.instagram.com/dominicsjc/" target="_blank">
+            <img class="icon" src="images/instagram.png" alt="instagram">
+        </a>
+    </div>
+    <div class="get-in-touch">
+        <a href="mailto:dominicsjc@qq.com">Get In Touch</a>
+    </div>
+</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="parallax.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="portfolio.js"></script>
 </body>
 </html>

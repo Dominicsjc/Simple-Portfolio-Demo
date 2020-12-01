@@ -39,20 +39,99 @@
     <i class="material-icons md-36">arrow_upward</i>
 </a>
 
-<div>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
+<div class="detail-container">
+    <div class="detail-container-text">
+        <h2 class="project-detail-part-title">Problem Statement</h2>
+        <p class="project-para">Nowadays, technology is booming. The scientific and engineering research, and also many
+            high-tech
+            applications, require high efficiency of floating-point calculation. Therefore, AVX512 instruction set is
+            given to birth. However, in practical experiment, a problem has been found: The throughput of Non-AVX tasks
+            will suffer unexpected decrease when there are AVX512 tasks running on the same server. This project is to
+            avoid the throughput decrease of Non-AVX tasks, in order to achieve the optimal overall efficiency of the
+            server.
+        </p>
+    </div>
+    <div class="detail-container-picture">
+        <img src="../images/avx/problem.png" alt="frequency decrease curve">
+    </div>
+</div>
+<div class="detail-container">
+    <div class="detail-container-picture">
+        <img src="../images/avx/concept.png" alt="concept diagram" id="avx-concept-diagram">
+    </div>
+    <div class="detail-container-text">
+        <h2 class="project-detail-part-title">Concept Generation</h2>
+        <p class="project-para">The whole design consists of Four parts:</p>
+        <ul class="project-para">
+            <li>
+                <span>Tasks Simulation:</span> Generate several AVX512 and Non-AVX workloads for the purpose of
+                simulating the real environment. Using C++.
+            </li>
+            <li>
+                <span>Extract the required system data:</span> Get the required CPU status from system including core
+                frequency, throughput, and active core number. Using Linux commands.
+            </li>
+            <li>
+                <span>Demo:</span> Demo the current status of CPUs and learning curves of training/testing by a
+                real-time User Interface. Using Python.
+            </li>
+            <li>
+                <span>Generate Operation:</span> Generate the optimal CPU operations to migrate the active workload to
+                an idle CPU according to the current observation of the system using <span>DQN (Deep Q Network)</span>.
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="detail-container">
+    <div class="detail-container-text">
+        <h2 class="project-detail-part-title">Design Description</h2>
+        <p class="project-para">The design consists of three parts: hardware, reinforcement learning algorithm, and user
+            interface. When the number of active cores increase, the corresponding frequency and throughput will
+            decrease. Also, for AVX512 workload and Non-AVX one, the throughput will be different.
+        </p>
+        <p class="project-para">
+            The data of CPU status will be reformatted into a state table which records the original throughput and the
+            updated throughput. The gym environment will generate an action to migrate the workload and calculate the
+            reward. With this action, the CPU status will be updated. The user interface will vividly display the CPU
+            status and show the learning curve.
+        </p>
+    </div>
+    <div class="detail-container-picture">
+        <img src="../images/avx/ui.png" alt="tuning ui" id="avx-tuning-ui">
+    </div>
+</div>
+<div class="detail-container">
+    <div class="detail-container-picture">
+        <img src="../images/avx/learning_curve.png" alt="learning curve" id="avx-learning-curve">
+    </div>
+    <div class="detail-container-text">
+        <h2 class="project-detail-part-title">Modeling and Analysis</h2>
+        <p class="project-para">The main facts that influence the convergence of the training result are the action
+            spaces, reward function and the observation spaces, where lots of attempts were made to modify the model.
+        </p>
+        <ul class="project-para">
+            <li>Average core frequency >= 3 GHz</li>
+            <li>Response time of tuning <= 800 ms</li>
+            <li>Exceptional handling <= 3%</li>
+            <li>Decoupling extent 3 separate modules</li>
+            <li>Application Programming Interface >= 2</li>
+            <li>Time of learning <= 5 hours</li>
+        </ul>
+    </div>
+</div>
+<div class="detail-container conclusion">
+    <div>
+        <h2 class="project-detail-part-title">Conclusion</h2>
+        <p class="project-para">
+            The intelligent tuning framework with reinforcement learning (RL) allows customers to optimize their server
+            using general APIs or user-friendly GUI. The key to achieve this goal is to construct a uniform and robust
+            framework and abstract server tuning problems as universal RL environment. Besides, the uniform and stable
+            framework also makes sense.
+        </p>
+    </div>
+    <div class="detail-container-picture">
+        <img src="../images/avx/expo.jpg" alt="design expo">
+    </div>
 </div>
 
 <footer>

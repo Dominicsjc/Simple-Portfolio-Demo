@@ -341,19 +341,19 @@ footer {
     color: rebeccapurple;
 }
 
-.about-me-container {
+.detail-container {
     width: 80%;
     position: relative;
-    margin: 40px auto 0 auto;
+    margin: 70px auto 0 auto;
     display: flex;
     justify-content: space-between;
 }
 
-.about-me-text {
+.detail-container-text {
     width: 45%;
 }
 
-.about-me-title {
+.about-me-title, .project-detail-part-title {
     margin: 0;
     color: gray;
     font-size: 26px;
@@ -365,24 +365,50 @@ footer {
     margin: 20px 0 10px 0;
 }
 
-.about-me-text p {
+.about-me-para {
     margin: 0;
     font-size: 18px;
     font-weight: 600;
     line-height: 1.5;
 }
 
-.about-me-portrait {
+.detail-container-picture {
     width: 50%;
 }
 
-.about-me-portrait img {
+.detail-container-picture img {
     width: 100%;
     border-radius: 4px;
     box-shadow: 5px 6px 30px 0 rgba(10, 10, 10, 0.3)
 }
 
+.project-para {
+    font-family: "Noto Sans", "Trebuchet MS", "HelveticaNeue", "Helvetica", "Arial", sans-serif;;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
 
+.project-para span {
+    font-weight: bolder;
+}
+
+#avx-concept-diagram {
+    padding: 20px;
+}
+
+#avx-tuning-ui {
+    padding: 10px 0 10px 25px;
+}
+
+#avx-learning-curve {
+    padding: 30px 20px 30px 15px;
+}
+
+.detail-container.conclusion {
+    flex-direction: column;
+    align-items: center;
+}
 
 
 

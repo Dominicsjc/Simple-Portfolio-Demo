@@ -1,5 +1,6 @@
 html, body {
     scroll-behavior:smooth;
+    margin: 0;
 }
 
 body a {
@@ -75,9 +76,8 @@ header a:hover:after, #northwestern:hover:after, #aws:hover:after {
 }
 
 .parallax-window {
-    min-height: 550px;
+    min-height: 600px;
     background: transparent;
-    padding: 20px;
 }
 
 .parallax-text {
@@ -299,5 +299,50 @@ footer {
 .get-in-touch:hover a {
     color: white;
 }
+
+.about-me-position {
+    text-align: center;
+    color: rebeccapurple;
+}
+
+.about-me-container {
+    width: 80%;
+    position: relative;
+    margin: 40px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-me-text  {
+    width: 45%;
+}
+
+.about-me-title {
+    margin: 0;
+    color: gray;
+    font-size: 26px;
+}
+
+.about-me-greeting {
+    font-size: 24px;
+    margin: 20px 0 10px 0;
+}
+
+.about-me-text p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.about-me-portrait {
+    width: 50%;
+}
+
+.about-me-portrait img {
+    width: 100%;
+    border-radius: 4px;
+}
+
 
 

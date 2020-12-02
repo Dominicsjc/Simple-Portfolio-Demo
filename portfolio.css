@@ -94,7 +94,7 @@ header a:focus:after, #northwestern:focus:after, #aws:focus:after, .parallax-tex
     text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
     font-size: 28px;
     font-style: italic;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .parallax-text h4 a {
@@ -222,8 +222,9 @@ header a:focus:after, #northwestern:focus:after, #aws:focus:after, .parallax-tex
 }
 
 .project-title.detail {
+    width: 80%;
     font-size: 64px;
-    margin-bottom: 0;
+    margin: 20px auto;
 }
 
 
